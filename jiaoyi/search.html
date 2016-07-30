@@ -1,0 +1,332 @@
+<html>
+<head>
+	<title>Jiaoyi - Promotions and Offers tailored for you!</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" >
+	<link href="css/sidebar.css" rel="stylesheet">
+	<link href="css/slidetabs.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slidetabs.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slidetabs.touch.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="red">
+	<script type="text/javascript">
+	    jQuery(document).ready(function() {
+	       jQuery('#slidetabs').slidetabs({
+	       	touchSupport: true,
+	       	tabsScroll: true,
+	       	autoHeight: true
+	       });
+
+	    });
+	</script>
+    <style type="text/css">
+    .st_view .col-xs-6{
+        border-right: 0.5px solid #F8F8F8;
+        border-top:  0.5px solid #F8F8F8;
+    }
+    .st_view .col-xs-6 img{
+        margin-top: 10px;
+    }
+    .st_view .col-xs-6 span{
+        color: #000;
+        position: relative;
+        float: left;
+        margin:-35px 10px 0;
+        font-size: 18px;
+        text-align: left;
+        color: #FFF;
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+    }
+    .search-filter{
+    }
+    .modal {
+      text-align: center;
+    }
+
+    .modal-dialog {
+      display: inline-block;
+      text-align: left;
+      margin-top: 70px;
+    }
+    .filter{
+        background: #E3E3E3;
+        padding: 8px 0 5px 10px;
+    }
+    .category-list ul,.sortby-list ul{
+        margin: 0;
+        padding: 0;
+    }
+    .category-list ul li,.sortby-list ul li{
+        list-style: none;
+        padding: 10px;
+        width: 80vw; 
+
+    }
+    .sortby-list ul li{
+        width: 45vw;
+    }
+    </style>
+</head>
+<body class="alt-grid">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 header">
+				
+					<div class="col-xs-2  menu-icon">
+						<img src="images/menu.png" height="26">
+					</div>
+					<div class="col-xs-8 search-container">
+					<input class="search" placeholder="Search on Jiaoyi">
+					</div>
+                    <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('.search').on('input', function() {
+                            $('#notfound').modal('show');
+                        });
+                    });
+                    </script>
+					<div class="col-xs-2 menu-grid-icon">
+						<img src="images/menu-grid.png" height="26" >
+					</div>
+				</div>
+				
+				<nav class="pull" display="none">
+  <div class="container-fluid">
+    <div class="row">
+    	<div class="col-xs-6 text-center border-right active">
+    		<img src="images/promotions.png" width="100">
+    		New & Upcoming
+					</div>
+					<div class="col-xs-6 text-center">
+						<img src="images/gift.png" width="100">
+					Offers for You
+					</div>
+					<div class="col-xs-6 text-center">
+						<img src="images/foryou.png" width="100">
+					Favourites
+					</div>
+					<div class="col-xs-6 text-center">
+						<img src="images/discount.png" width="100">
+					Ending Soon
+					</div>
+    </div>
+  </div>
+</nav>
+
+<div class="overlay"></div>
+		
+		</div>
+
+			<div class="nearby-content" style="margin-left: -15px;">
+				<img src="images/map-sample.png" style="width:100vw;">
+			</div>
+			<div class="search-content">
+                <div class="row filter">
+                <div class="col-xs-9 search-filter">Search in <b class="cattext" data-toggle="modal" data-target="#categoriesmodal">Furniture</b></div><div class="col-xs-3 search-filter sortbytext" data-toggle="modal" data-target="#sortmodal">Popularity</div>
+            </div>
+            <div class="row">
+
+                <div class="col-xs-6"><img src="images/sample/search/1.jpg"></div>
+                <div class="col-xs-6"><img src="images/sample/search/2.jpg"></div>
+                <div class="col-xs-6"><img src="images/sample/search/3.jpg"></div>
+                <div class="col-xs-6"><img src="images/sample/search/5.jpg"></div>
+            </div>
+            </div>
+
+
+
+  <!-- Trigger the modal with a button -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="categoriesmodal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">All Categories</div>
+        </div>
+        <div class="modal-body category-list">
+          <ul>
+            <li>Mobile Phones</li>
+            <li>Fashion</li>
+            <li>Computers</li>
+            <li>Electronics</li>
+            <li>Daily Needs</li>
+            <li>Home Appliances</li>
+            <li>Beauty</li>
+            <li>Baby</li>
+        </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    <div class="modal fade" id="sortmodal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Sort By</div>
+        </div>
+        <div class="modal-body sortby-list">
+          <ul>
+            <li>Popularity</li>
+            <li>Distance</li>
+            <li>Value (High to Low)</li>
+            <li>Value (Low to High)</li>
+        </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="notfound" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body sortby-list">
+            <p>Sorry, No deals were found for your Search, would you like us to remind you when there are new deals here?</p>
+        </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+	
+			</div>
+
+	</div>
+<a class="sidebar-toggle" href="#">
+        <span class="sr-only">Sidebar toggle</span>
+        <i class="fa fa-sidebar-toggle"></i>
+    </a>
+<div data-sidebar="true" class="sidebar-trigger">
+    <a class="sidebar-toggle" href="#">
+        <span class="sr-only">Sidebar toggle</span>
+        <i class="fa fa-sidebar-toggle"></i>
+    </a>
+
+    <div class="sidebar-wrapper sidebar-default" style="z-index:1200;">
+        <div class="sidebar-scroller">
+            <ul class="sidebar-menu">
+                <li class="sidebar-group">
+                	<span class="name">John</span>
+                    <ul class="sidebar-group-menu">
+                        <li class="sidebar-item"><a href="#" class="active">Home</a></li>
+                        <li class="sidebar-item"><a href="#">Favourites</a></li>
+                        <li class="sidebar-item"><a href="#">Alerts</a></li>
+                        <li class="sidebar-item"><a href="#">Rewards</a></li>
+                        <li class="sidebar-item"><a href="#">Deals for Me</a></li>
+                        <li class="sidebar-item"><a href="#">Settings</a></li>
+                    </ul>
+                </li>
+             </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.pull').hide();
+
+    $('.category-list li').click(function() {
+        var str = $(this).text();
+        $( ".cattext" ).html( str );
+    });
+    $('.sortby-list li').click(function() {
+        var str = $(this).text();
+        $( ".sortbytext" ).html( str );
+    });
+
+	$('.menu-grid-icon').click(function() {
+        $('.pull').slideToggle();
+        $('.overlay').fadeToggle(400);
+        $('.overlay').click(function() {
+        	$('.pull').slideToggle();
+        	$('.overlay').fadeToggle(400);
+        });
+        $('.nearby-tab').click(function() {
+        	$('.deals-content').hide();
+        	$('.deals-tab').removeClass("active");
+        	$('.nearby-tab').addClass("active");
+        	$('.nearby-content').show();
+        });
+        $('.deals-tab').click(function() {
+        	$('.nearby-content').hide();
+        	$('.deals-tab').addClass("active");
+        	$('.nearby-tab').removeClass("active");
+        	$('.deals-content').show();
+        });
+      });
+	return false;
+});
+  </script>
+<script type="text/javascript">
+/**
+ * Make an element's height equal to its width and sets an event handler to keep doing it
+ * @param {string} element - Selector of the element to make square
+ * @param {float} [ratio=1] - What ratio to keep between the width and height
+ * @param {integer} [minLimit=0] - Only square the element when the viewport width is above this limit
+ */
+function squareThis (element, ratio, minLimit)
+{
+    // First of all, let's square the element
+    square(ratio, minLimit);
+
+    // Now we'll add an event listener so it happens automatically
+    window.addEventListener('resize', function(event) {
+        square(ratio, minLimit);
+    });
+    
+    // This is just an inner function to help us keep DRY
+    function square(ratio, minLimit)
+    {
+        if(typeof(ratio) === "undefined")
+        {
+            ratio = 1;
+        }
+        if(typeof(minLimit) === "undefined")
+        {
+            minLimit = 0;
+        }
+        var viewportWidth = window.innerWidth;
+        
+        if(viewportWidth >= minLimit)
+        {
+            var newElementHeight = $(element).width() * ratio;
+            $(element).height(newElementHeight);
+        }
+        else
+        {
+            $(element).height('auto');
+        }
+    }
+}
+squareThis('.search-content .col-xs-6');
+squareThis('.search-content .col-xs-6 img');
+</script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.js'></script>
+<script src="js/tabs.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.1.3/hammer.min.js"></script>
+	<script type="text/javascript" src="js/sidebar.js"></script>
+	<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.13.0.js'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+</body>
+</html>

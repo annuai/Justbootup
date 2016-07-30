@@ -1,0 +1,420 @@
+<!--Dear awsome person, I am working hard to get it all working, then I will streemline and econamize markup css and js, I need some help with the auto centering tabs, any ideas-->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">  
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.js"></script>
+<style type="text/css">
+/*Doc setup*/
+html,
+body{
+  position:relative;
+  min-height:100vh;
+  overflow-y:hidden;
+}
+body{
+background:url(http://www.lirent.net/wp-content/uploads/2014/10/Android-Lollipop-wallpapers-5.jpg);
+  background-size:cover;
+}
+
+/*component*/
+.navbar.slide-tab{
+  border:0;
+  border-radius:0;
+  border-bottom:2px solid #d62400;
+  color:#fff;
+  min-height:0!important;
+  position:relative;
+  z-index:2;
+}
+.navbar.navbar-default.slide-tab{
+  background:none;
+}
+.navbar.slide-tab .navbar-nav{
+  text-transform:uppercase;
+  letter-spacing:.9px;
+  font-weight:600;
+  font-size:1.3rem;
+  -webkit-transition:background-size .3s;
+  background: -webkit-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
+background: -moz-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
+background: -o-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
+background: linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
+  background-size:0;
+  background-position:0 0;
+  background-repeat:no-repeat;
+}
+.navbar.slide-tab .navbar-nav > li > a,
+.navbar.slide-tab .navbar-nav > li > a:hover,
+.navbar.slide-tab .navbar-nav > li > a:focus{
+  background:none;
+  color:inherit;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;
+}
+@-webkit-keyframes upTab{
+  0%{
+    background-position:-50px;
+    background-size:0;
+   background-position:center 50px;
+  }
+  100%{
+    background-position:0;
+    background-size:200px;
+    background-position:center center;
+  }
+}
+
+.navbar.slide-tab .navbar-nav > li.active > a{
+  color:#fff;
+background: -webkit-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
+background: -moz-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
+background: -o-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
+background: linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
+background-position:0 0;
+  background-repeat:no-repeat;
+  -webkit-animation:upTab .3s;
+}
+.navbar.slide-tab .navbar-nav > li a{
+  padding:2rem 3rem;
+}
+
+.layer{
+  background:rgba(0,0,0,0.8);
+  height:100%;
+}
+
+.container-fluid.scroll{
+  overflow-x:scroll;
+}
+.breakscroll{
+  width:500vw; /*swapping to dynamic js*/
+  margin:0!important;
+}
+.breakscroll li{
+  display:inline-block!important;
+  white-space:nowrap;
+}
+/*hide scrollbar*/
+.invisibar::-webkit-scrollbar {
+    height:0px;
+}
+.control{
+  position:absolute;
+  right:0;
+  top:0;
+  background:rgba(0,0,0,0.95);
+  height:100%;
+  margin:0;
+  padding:0;
+}
+.control li{
+  list-style:none;
+  float:left;
+  padding-top: 10px;
+padding-bottom: 10px;
+line-height: 28px;
+  font-size:1.4em;
+  padding-left:15px;
+  padding-right:10px;
+}
+.control li span:not(.muted){
+  color:#eee!important;
+}
+.muted{
+  color:#666!important;
+  opacity:0.6;
+}
+.hotspots .hotspot{
+  width:50%;
+  padding-bottom:50%;
+  position:absolute;
+  top:0;
+  float:left;
+  z-index:1;
+}
+.hotspots .hotspot > .hotspot{
+  padding:0;
+  height:100%;
+  width:10%;
+  position:absolute;
+  border:0;
+  outline:0;
+}
+.hotspots.verbose .hotspot[data="left"]{
+  background:rgba(255, 0, 0, 0.15);
+  left:0;
+}
+.hotspots.verbose .hotspot[data="right"]{
+  background:rgba(0, 0, 255, 0.15);
+  right:0;
+}
+
+/*this is where im tierd and will need to change it*/
+.panes.breakscroll{
+  width:9999vw!important;
+}
+.panes > .content{
+  min-height:100vh;
+  height:100%;
+  width:calc(100vw);
+  float:left;
+}
+.dash{
+  width:100%;
+  overflow:hidden;
+  overflow-x:scroll;
+  margin-top:-81.4px;
+}
+
+.hotspot{
+  position:absolute;
+  z-index:1;
+  top:72px;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.hotspot > .half{
+  width:50%;
+  float:left;
+  height:100%;
+}
+.click{
+  width:5rem;
+  height:100%;
+  border:0;
+  outline:0;
+  opacity:0.0;
+}
+.half[data="left"] .click{
+  float:left;
+}
+.half[data="right"] .click{
+  float:right;
+}
+
+.inner{
+  margin-top:80px;
+}
+.slot{
+  list-style:none!important;
+}
+.icon{
+  background:#333;
+  color:#fff;
+  margin:4.1%;
+}
+</style>
+<script>
+/*my lovely util functions*/
+/*active class*/
+
+function activate() {
+  this.name = "active";
+  this.init = function (el) {
+    el.addClass("active").siblings().removeClass("active");
+  }
+}
+/*get size of element*/
+function size() {
+  this.width = function (el) {
+    return el.width();
+  }
+  this.height = function (el) {
+    return el.height();
+  }
+}
+
+function bgSizeMatch(el) {
+  var activeW = el.width();
+  alter.nav.css({
+    "background-size": activeW + "px 100px"
+  });
+}
+
+function bgPos() {
+  this.init = function (el) {
+    offset = el.position().left;
+    corrections = el.parent().offset().left;
+    offset = offset - corrections;
+    alter.nav.animate({
+      "background-position": offset + "px"
+    });
+  }
+}
+
+function adjust() {
+  this.init = function (el) {
+    var adjustActive = el.index() + 1;
+    return adjustActive;
+  }
+}
+
+function slide() {
+  this.init = function (multiplier) {
+    var amount = multiplier * $(window).width();
+    return amount + "px";
+  }
+}
+
+/*element vars*/
+var alter = {
+  nav: $(".slide-tab .navbar-nav"),
+  navItem: $(".slide-tab ul:not(.control) li"),
+  navItemActive: $(".slide-tab ul:not(.control) li.active"),
+  navControl: $(".control"),
+}
+
+/*what utils we are using today*/
+bgSizeMatch($(".active"));
+size = new size();
+active = new activate();
+bgPos = new bgPos();
+adjust = new adjust();
+slide = new slide();
+
+slideTab = { //main function
+  init: function () {
+
+    alter.navItem.click(function (e) {
+      bgSizeMatch($(this));
+      active.init($(this));
+      bgPos.init($(this));
+      
+      /*Prototyping scroll reset offset center*/
+      var offset = $(this).position().left;
+    
+      
+      var index = $(this).index();
+      var clickAmount = slide.init(index);
+
+      $(".content").parent().parent().animate({
+        scrollLeft: clickAmount + "px"
+      }, 300);
+    });
+
+    alter.navItem.each(function () {
+      $(".panes").append("<div class='content'><div class='col-md-10 col-md-offset-1 ratio-2:1 inner'><ul class='slot'><li class='icon col-md-1 ratio-1:1'>1</li><li class='icon col-md-1 ratio-1:1'>2</li><li class='icon col-md-1 ratio-1:1'>3</li><li class='icon col-md-1 ratio-1:1'>4</li><li class='icon col-md-1 ratio-1:1'>5</li><li class='icon col-md-1 ratio-1:1'>6</li></ul></div></div>");
+    });
+
+
+    //measure total child width, designed responsively too.
+    var acumWidth = 0;
+    alter.navItem.each(function () {
+      var itemWidth = $(this).width();
+      acumWidth += itemWidth;
+      //corrcetion
+      var controlWidth = alter.navControl.width();
+      $(this).parent().css({
+        "width": acumWidth + controlWidth + "px"
+      });
+    });
+
+
+
+    $(window).bind('resizeEnd', function () {
+      //get the new window size and return it from this special event
+    });
+
+
+    function tab() {
+      this.left = function () {
+        var prev = $(".active").prev();
+        var prevI = $(".active").prev().index();
+        var leftAmount = slide.init(prevI);
+
+        active.init(prev);
+        bgPos.init(prev);
+        bgSizeMatch(prev);
+
+        $(".content").parent().parent().animate({
+          scrollLeft: leftAmount + "px"
+        }, 300);
+      }
+      this.right = function () {
+        var next = $(".active").next();
+        var nextI = $(".active").next().index();
+        var rightAmount = slide.init(nextI);
+
+        active.init(next);
+        bgPos.init(next);
+        bgSizeMatch(next);
+
+        $(".content").parent().parent().animate({
+          scrollLeft: rightAmount + "px"
+        }, 300);
+      }
+    }
+    tab = new tab();
+
+    $(".half[data='right'] .click").click(function () {
+      tab.right();
+    });
+    $(".half[data='left'] .click").click(function () {
+      tab.left();
+    });
+    $(".half").swipe({
+      swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        if (direction == "left") {
+          tab.right();
+        } else if (direction == "right") {
+          tab.left();
+        }
+      }
+    });
+  }
+}
+
+$(function () {
+  $(slideTab.init);
+});
+</script>
+</head>
+<body>
+<div class="layer">
+<nav class="navbar navbar-default slide-tab" role="navigation">
+  <div class="container-fluid scroll invisibar">
+      <ul class="nav navbar-nav breakscroll">
+        <li class="active"><a href="#">Foo</a></li>
+        <li><a href="#">Bar</a></li>
+        <li><a href="#">Thunder</a></li>
+        <li><a href="#">Flash</a></li>
+        <li><a href="#">Hotdog</a></li>
+        <li><a href="#">Bar</a></li>
+        <li><a href="#">Thunder</a></li>
+        <li><a href="#">Flash</a></li>
+        <li><a href="#">Hotdog</a></li>
+        <li><a href="#">Bar</a></li>
+        <li><a href="#">Thunder</a></li>
+        <li><a href="#">Flash</a></li>
+        <li><a href="#">Hotdog</a></li>
+        <li><a href="#">Bar</a></li>
+        <li><a href="#">Thunder</a></li>
+        <li><a href="#">Flash</a></li>
+        <li><a href="#">Hotdog</a></li>
+    </ul> 
+  </div>
+  <ul class="control">
+      <li><span class="glyphicon glyphicon-search"></span></li>
+      <li><span class="glyphicon glyphicon-align-justify muted"></span></li>
+  </ul>
+</nav>
+  <div class="hotspot">
+    <div class="half slide" data="left">
+      <button class="click"></button>
+    </div>
+    <div class="half slide" data="right">
+      <button class="click"></button>
+    </div>
+  </div>
+  <div class="dash scroll invisibar">
+    <div class="panes breakscroll">
+    
+    </div>
+  </div>
+</div>
+  
+<body> 
