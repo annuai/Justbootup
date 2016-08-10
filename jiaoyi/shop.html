@@ -7,8 +7,8 @@
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" >
 	<link href="css/sidebar.css" rel="stylesheet">
 	<link href="css/slidetabs.css" rel="stylesheet">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.slidetabs.min.js"></script>
 	<script type="text/javascript" src="js/jquery.slidetabs.touch.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
@@ -26,6 +26,9 @@
 	    });
 	</script>
     <style type="text/css">
+    .header{
+        z-index: 1100;
+    }
     .st_view .col-xs-6{
         border-right: 0.5px solid #F8F8F8;
         border-top:  0.5px solid #F8F8F8;
@@ -45,84 +48,24 @@
              0px 8px 13px rgba(0,0,0,0.1),
              0px 18px 23px rgba(0,0,0,0.1);
     }
-    .search-filter{
-    }
-    .modal {
-      text-align: center;
-    }
-
-    .modal-dialog {
-      display: inline-block;
-      text-align: left;
-      margin-top: 70px;
-    }
-    .filter{
-        background: #E3E3E3;
-        padding: 8px 0 5px 10px;
-    }
-    .category-list ul,.sortby-list ul{
-        margin: 0;
-        padding: 0;
-    }
-    .category-list ul li,.sortby-list ul li{
-        list-style: none;
-        padding: 10px;
-        width: 80vw; 
-
-    }
-    .sortby-list ul li{
-        width: 45vw;
-    }
     </style>
 </head>
 <body class="alt-grid">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 header">
-
-                <div data-sidebar="true" class="sidebar-trigger">
-                    <a class="sidebar-toggle" href="#">
-                        <div class="col-xs-2  menu-icon">
-                             <img src="images/menu.png" height="26">
-                        </div>
-                    </a>
-
-    <div class="sidebar-wrapper sidebar-default" style="z-index:1200;">
-        <div class="sidebar-scroller">
-            <ul class="sidebar-menu">
-                <li class="sidebar-group">
-                    <span class="name">John</span>
-                    <ul class="sidebar-group-menu">
-                        <li class="sidebar-item"><a href="#" class="active">Home</a></li>
-                        <li class="sidebar-item"><a href="#">Favourites</a></li>
-                        <li class="sidebar-item"><a href="#">Alerts</a></li>
-                        <li class="sidebar-item"><a href="#">Rewards</a></li>
-                        <li class="sidebar-item"><a href="#">Deals for Me</a></li>
-                        <li class="sidebar-item"><a href="#">Settings</a></li>
-                    </ul>
-                </li>
-             </ul>
-        </div>
-    </div>
-</div>
-                
-                    
-
-                    <div class="col-xs-8 search-container">
-                    <input class="search" placeholder="Search on Jiaoyi">
-                                       <script type="text/javascript">
-                    $(document).ready(function(){
-                        $('.search').on('input', function() {
-                            $('#notfound').modal('show');
-                        });
-                    });
-                    </script>
-                    </div>
-                    <div class="col-xs-2 menu-grid-icon">
-                        <img src="images/menu-grid.png" height="26" >
-                    </div>
-                </div>
-
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 header">
+				
+					<div class="col-xs-2  menu-icon">
+						<img src="images/menu.png" height="26">
+					</div>
+					<div class="col-xs-8 search-container">
+					<input class="search" placeholder="Search on Jiaoyi">
+					</div>
+					<div class="col-xs-2 menu-grid-icon">
+						<img src="images/menu-grid.png" height="26" >
+					</div>
+				</div>
+				
 				<nav class="pull" display="none">
   <div class="container-fluid">
     <div class="row">
@@ -149,93 +92,76 @@
 <div class="overlay"></div>
 		
 		</div>
-
-			<div class="nearby-content" style="margin-left: -15px;">
-				<img src="images/map-sample.png" style="width:100vw;">
+			<div class="row subheader">
+				<div class="col-xs-6 text-center border-right active deals-tab">
+					DEALS
+				</div>
+				<div class="col-xs-6 text-center nearby-tab">
+					NEARBY
+				</div>
 			</div>
-			<div class="search-content">
-                <div class="row filter">
-                <div class="col-xs-9 search-filter">Search in <b class="cattext" data-toggle="modal" data-target="#categoriesmodal">Furniture</b></div><div class="col-xs-3 search-filter sortbytext" data-toggle="modal" data-target="#sortmodal">Popularity</div>
-            </div>
-            <div class="row">
+			<div class="nearby-content">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592.9457033796759!2d103.82207631614847!3d1.2640872289893657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2eb0924088b36d7e!2sTimberland!5e0!3m2!1sen!2sin!4v1469797616683" width="360" height="580" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+			<div class="deals-content">
 
-                <div class="col-xs-6"><img src="images/sample/search/1.jpg"></div>
-                <div class="col-xs-6"><img src="images/sample/search/2.jpg"></div>
-                <div class="col-xs-6"><img src="images/sample/search/3.jpg"></div>
-                <div class="col-xs-6"><img src="images/sample/search/5.jpg"></div>
-            </div>
-            </div>
-
-
-
-  <!-- Trigger the modal with a button -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="categoriesmodal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title">All Categories</div>
+  <div id="slidetabs" class="clean-horizontal">
+	<div class="st_tabs">
+		<div class="st_tabs_wrap">
+			<ul>
+				<li><a href="#view_1">Beauty</a></li>
+				<li><a href="#view_2">Baby</a></li>
+				<li><a href="#view_3">Personal Care</a></li>
+                <li><a href="#view_4">Credit Cards</a></li>
+				<li><a href="#view_5">Computers</a></li>
+				<li><a href="#view_6">Electronics</a></li>
+                <li><a href="#view_7">More...</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="st_views">
+        <div class="view_1 st_view">
+        	<a href="deal.html">
+        	<div class="row grid"><div class="col-xs-6"><img src="images/sample/beauty/1.jpg"><span>Get 60% off on Facial Kit</span></div><div class="col-xs-6"><img src="images/sample/beauty/2.jpg"><span><b style="color:#E02C2C;">30% Off</b> at Toni & Guy this Weekend</span></div><div class="col-xs-6"><img src="images/sample/beauty/3.jpg"><span>Get 60% off on Facial Kit</span></div><div class="col-xs-6"><img src="images/sample/beauty/4.jpg"></div><div class="col-xs-6"><img src="images/sample/beauty/5.jpg"><span>Get 60% off on Facial Kit</span></div><div class="col-xs-6">World</div><div class="col-xs-6">World</div></div>
+        </a>
         </div>
-        <div class="modal-body category-list">
-          <ul>
-            <li>Mobile Phones</li>
-            <li>Fashion</li>
-            <li>Computers</li>
-            <li>Electronics</li>
-            <li>Daily Needs</li>
-            <li>Home Appliances</li>
-            <li>Beauty</li>
-            <li>Baby</li>
-        </ul>
+        <div class="view_2 st_view">
+        	<div class="row grid"><div class="col-xs-6"><img src="images/sample/baby/1.jpg"></div><div class="col-xs-6"><img src="images/sample/baby/2.jpg"></div><div class="col-xs-6"><img src="images/sample/baby/3.jpg"></div><div class="col-xs-6"><img src="images/sample/baby/4.jpg"></div><div class="col-xs-6"><img src="images/sample/baby/5.jpg"></div><div class="col-xs-6">World</div><div class="col-xs-6">World</div></div>
         </div>
-      </div>
-      
-    </div>
-  </div>
-    <div class="modal fade" id="sortmodal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title">Sort By</div>
+        <div class="view_3 st_view">
+        	<div class="row grid"><div class="col-xs-6"><img src="images/sample/computers/1.jpg"></div><div class="col-xs-6"><img src="images/sample/computers/2.jpg"></div><div class="col-xs-6"><img src="images/sample/computers/3.jpg"></div><div class="col-xs-6"><img src="images/sample/computers/4.jpg"></div><div class="col-xs-6"><img src="images/sample/computers/5.jpg"></div><div class="col-xs-6">World</div><div class="col-xs-6">World</div><div class="col-xs-6">Hello</div><div class="col-xs-6">World</div></div>s
         </div>
-        <div class="modal-body sortby-list">
-          <ul>
-            <li>Popularity</li>
-            <li>Distance</li>
-            <li>Value (High to Low)</li>
-            <li>Value (Low to High)</li>
-        </ul>
+        <div class="view_4 st_view">
+        	<div class="row grid"><div class="col-xs-6"><img src="images/sample/creditcards/1.jpg"></div><div class="col-xs-6"><img src="images/sample/creditcards/2.jpg"></div><div class="col-xs-6"><img src="images/sample/creditcards/3.png"></div><div class="col-xs-6"><img src="images/sample/creditcards/4.png"></div><div class="col-xs-6"><img src="images/sample/creditcards/2.jpg"></div><div class="col-xs-6">World</div><div class="col-xs-6">World</div><div class="col-xs-6">Hello</div><div class="col-xs-6">World</div></div>s
         </div>
-      </div>
-      
-    </div>
-  </div>
-  <div class="modal fade" id="notfound" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-body sortby-list">
-            <p>Sorry, No deals were found for your Search, would you like us to remind you when there are new deals here?</p>
+        <div class="view_5 st_view">
+        	<div class="row grid"><div class="col-xs-6"><img src="images/sample/1.png"></div><div class="col-xs-6"><img src="images/sample/2.jpg"></div><div class="col-xs-6"><img src="images/sample/3.jpg"></div><div class="col-xs-6"><img src="images/sample/4.jpg"></div><div class="col-xs-6"><img src="images/sample/5.jpg"></div><div class="col-xs-6">World</div><div class="col-xs-6">World</div><div class="col-xs-6">Hello</div><div class="col-xs-6">World</div></div>s
         </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-      </div>
-      
-    </div>
-  </div>
-
+        <div class="view_6 st_view">
+        	<div class="row grid"><div class="col-xs-6"><img src="images/sample/1.png"></div><div class="col-xs-6"><img src="images/sample/2.jpg"></div><div class="col-xs-6"><img src="images/sample/3.jpg"></div><div class="col-xs-6"><img src="images/sample/4.jpg"></div><div class="col-xs-6"><img src="images/sample/5.jpg"></div><div class="col-xs-6">World</div><div class="col-xs-6">World</div><div class="col-xs-6">Hello</div><div class="col-xs-6">World</div></div>s
+        </div>
+	</div>
+</div>
+</div>
+ 
 
 	
 			</div>
 
+<footer class="footer navbar-fixed-bottom">
+        <a href="index.html"><div class="col-xs-3 active">
+                        <img src="images/home-white.png" width="24"><span style="margin-left:6px;">HOME</span>
+                    </div></a>
+                    <a href="hot.html"><div class="col-xs-3">
+                        <img src="images/hot.png" width="24"><span style="margin-left:10px;">HOT</span>
+                    </div></a>
+                    <a href="alerts.html"><div class="col-xs-3">
+                        <img src="images/notification.png" width="24"><span style="margin-left:4px;">ALERTS</span>
+                    </div></a>
+                    <a href="wallet.html"><div class="col-xs-3">
+                        <img src="images/wallet.png" width="24"><span style="margin-left:3px;">WALLET</span>
+                    </div></a>
+    </footer>
 	</div>
 <a class="sidebar-toggle" href="#">
         <span class="sr-only">Sidebar toggle</span>
@@ -270,13 +196,8 @@
 $(document).ready(function(){
 	$('.pull').hide();
 
-    $('.category-list li').click(function() {
-        var str = $(this).text();
-        $( ".cattext" ).html( str );
-    });
-    $('.sortby-list li').click(function() {
-        var str = $(this).text();
-        $( ".sortbytext" ).html( str );
+    $('.search').focus(function() {
+        window.location.replace("search.html");
     });
 
 	$('.menu-grid-icon').click(function() {
@@ -343,8 +264,8 @@ function squareThis (element, ratio, minLimit)
         }
     }
 }
-squareThis('.search-content .col-xs-6');
-squareThis('.search-content .col-xs-6 img');
+squareThis('.grid .col-xs-6');
+squareThis('.grid .col-xs-6 img');
 </script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.js'></script>
 <script src="js/tabs.js"></script>

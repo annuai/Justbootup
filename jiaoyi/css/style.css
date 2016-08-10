@@ -65,9 +65,6 @@
 -moz-box-shadow: inset 0px -18px 41px -11px rgba(0,0,0,0.75);
 box-shadow: inset 0px -18px 41px -11px rgba(0,0,0,0.75);
 	}
-	.sidebar-toggle{
-		display: none !important;
-	}
 	.rowmenu{
 	}
 	.rowmenu div{
@@ -153,4 +150,42 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
 }
 .nearby-content{
 	display: none;
+}
+    .col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+.footer div{
+    padding: 0 !important;
+    margin: 0 !important; 
+}
+.footer div div{
+    padding: 10px !important;
 }

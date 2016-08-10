@@ -15,11 +15,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="theme-color" content="red">
+    <style type="text/css">
+    h3{
+        padding: 10px 0 0 10px;
+    }
+    h4{
+        padding: 0 10px 5px;
+    }
+    .col-xs-6 div,.col-md-6 div,.col-lg-6 div,.col-xl-6 div{
+        display: table-cell;
+        vertical-align: middle;
+        color: #FFF;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+    }
+    </style>
 </head>
 <body>
     <h3>Mobile Application Project UX Prototype</h3>
     <h4>Justbootup</h4>
-    <div class="col-xs-6">End User Prototype</div>
-    <div class="col-xs-6">Admin Backend Prototype</div>
+    <a href="index.html">
+    <div class="col-xs-6" style="background:green;">
+        <div style="display:table; height:300px;">
+            <div style="display:table-cell; vertical-align:middle; ">End User Prototype</div>
+        </div>
+    </div>
+    </a>
+    <a href="">   
+        <div class="col-xs-6" style="background:red;">
+        <div style="display:table; height:300px;">
+            <div style="display:table-cell; vertical-align:middle; ">Admin Backend Prototype</div>
+        </div>
+    </div>    
+</a>
 </body>
 </html>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#tooltip').live('click', function() {
+    $( ".tooltip-inner" ).text() = $( ".value-div" ).text();
+});
+});
+</script>

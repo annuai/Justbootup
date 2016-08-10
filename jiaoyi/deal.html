@@ -101,6 +101,14 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
         right: 20px;
         margin-top: 80px;
     }
+    .deals-content .report{
+        background: transparent url("images/report.png") no-repeat;
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        right: 23px;
+        margin-top: 124px;
+    }
     .deal-footer .drive{
         display: block;
         background: transparent url("images/drive.png") no-repeat !important;
@@ -164,20 +172,45 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
     </style>
 </head>
 <body class="alt-grid">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 header">
-				
-					<div class="col-xs-2  menu-icon">
-						<img src="images/menu.png" height="26">
-					</div>
-					<div class="col-xs-8 search-container">
-					<input class="search" placeholder="Search on Jiaoyi">
-					</div>
-					<div class="col-xs-2 menu-grid-icon">
-						<img src="images/menu-grid.png" height="26" >
-					</div>
-				</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 header">
+
+                <div data-sidebar="true" class="sidebar-trigger">
+                    <a class="sidebar-toggle" href="#">
+                        <div class="col-xs-2  menu-icon">
+                             <img src="images/menu.png" height="26">
+                        </div>
+                    </a>
+
+    <div class="sidebar-wrapper sidebar-default" style="z-index:1200;">
+        <div class="sidebar-scroller">
+            <ul class="sidebar-menu">
+                <li class="sidebar-group">
+                    <span class="name">John</span>
+                    <ul class="sidebar-group-menu">
+                        <li class="sidebar-item"><a href="#" class="active">Home</a></li>
+                        <li class="sidebar-item"><a href="#">Favourites</a></li>
+                        <li class="sidebar-item"><a href="#">Alerts</a></li>
+                        <li class="sidebar-item"><a href="#">Rewards</a></li>
+                        <li class="sidebar-item"><a href="#">Deals for Me</a></li>
+                        <li class="sidebar-item"><a href="#">Settings</a></li>
+                    </ul>
+                </li>
+             </ul>
+        </div>
+    </div>
+</div>
+                
+                    
+
+                    <div class="col-xs-8 search-container">
+                    <input class="search" placeholder="Search on Jiaoyi">
+                    </div>
+                    <div class="col-xs-2 menu-grid-icon">
+                        <img src="images/menu-grid.png" height="26" >
+                    </div>
+                </div>
 				
 				<nav class="pull" display="none">
   <div class="container-fluid">
@@ -262,6 +295,24 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
       
     </div>
   </div>
+  <div class="report clearfix" data-toggle="modal" data-target="#reportmodal"></div>
+  <div class="modal fade" id="reportmodal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body sortby-list">
+            <p><b>Report Invalid Deal!</b><br>Are you sure you want to report this Deal as invalid?</p>
+        </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+
 
                 <img class="header-image" src="images/sample/deal1.png">
                 <div class="deal-title">50% Off @ Starbucks on Coffee!</div>
@@ -275,6 +326,7 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
                 <div class="also-on col-xs-12">
                     <div class="title">Other Deals @<b>Starbucks</b></div>
                     <div class="row grid"><div class="col-xs-6"><img src="images/sample/starbucks/1.jpg"></div><div class="col-xs-6"><img src="images/sample/starbucks/2.jpg"></div><div class="col-xs-6"><img src="images/sample/starbucks/3.jpg"></div><div class="col-xs-6"><img src="images/sample/starbucks/4.jpg"></div><div class="col-xs-6"><img src="images/sample/starbucks/5.jpg"></div><div class="col-xs-6"><img src="images/sample/starbucks/6.jpg"></div></div>
+                    <div>Show More</div>
                 </div>
                 <div class="comments col-xs-12" id="comments">
                     <div class="title">Comments</div>
@@ -301,38 +353,10 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
     <div class="row">
      <a href="#comments"><div class="col-xs-4"><center><div class="comments"></div>1</center></div></a>
      <a href="drive.html"><div class="col-xs-4"><center><div class="drive"></div>200M</center></div></a>
-     <div class="col-xs-4 redeem"><b><i>REDEEM<br>NOW</i></b></div>
+     <div class="col-xs-4 redeem"><b><i>CHAT<br>NOW</i></b></div>
  </div>
 </div>
 	</div>
-<a class="sidebar-toggle" href="#">
-        <span class="sr-only">Sidebar toggle</span>
-        <i class="fa fa-sidebar-toggle"></i>
-    </a>
-<div data-sidebar="true" class="sidebar-trigger">
-    <a class="sidebar-toggle" href="#">
-        <span class="sr-only">Sidebar toggle</span>
-        <i class="fa fa-sidebar-toggle"></i>
-    </a>
-
-    <div class="sidebar-wrapper sidebar-default" style="z-index:1200;">
-        <div class="sidebar-scroller">
-            <ul class="sidebar-menu">
-                <li class="sidebar-group">
-                	<span class="name">John</span>
-                    <ul class="sidebar-group-menu">
-                        <li class="sidebar-item"><a href="#" class="active">Home</a></li>
-                        <li class="sidebar-item"><a href="#">My Orders</a></li>
-                        <li class="sidebar-item"><a href="#">Rewards</a></li>
-                        <li class="sidebar-item"><a href="#">Deals for Me</a></li>
-                        <li class="sidebar-item"><a href="#">Favourites</a></li>
-                        <li class="sidebar-item"><a href="#">Settings</a></li>
-                    </ul>
-                </li>
-             </ul>
-        </div>
-    </div>
-</div>
 
 <script type="text/javascript">
 $(document).ready(function(){
