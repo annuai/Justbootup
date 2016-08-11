@@ -81,11 +81,7 @@
             <div class="col-xs-12 header">
 
                 <div data-sidebar="true" class="sidebar-trigger">
-                    <a class="sidebar-toggle" href="#">
-                        <div class="col-xs-2  menu-icon">
-                             <img src="images/menu.png" height="26">
-                        </div>
-                    </a>
+  
 
     <div class="sidebar-wrapper sidebar-default" style="z-index:1200;">
         <div class="sidebar-scroller">
@@ -105,7 +101,16 @@
         </div>
     </div>
 </div>
-                
+                <div class="col-xs-2  menu-icon back-icon">
+                             <img src="images/back.png" height="26">
+                        </div>
+                        <script type="text/javascript">
+                            $(document).ready(function(){
+                                $('.back-icon').on('click', function() {
+                                    history.go(-1);
+                                });
+                            });
+                    </script>
                     
 
                     <div class="col-xs-8 search-container">
