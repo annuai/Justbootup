@@ -1,0 +1,35 @@
+/*
+  Ratings Stars
+  (with as little code as possible)
+*/
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+  display: inline-block;
+  margin: 0 10px;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  font-size: 17px;
+}
+.rating > span:hover,
+.rating > span:hover ~ span {
+  color: transparent;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   left: 0; 
+   color: gold;
+}
+.comment-rating{
+  margin:0 !important;
+}
+.comment-rating > span{
+  font-size: 13px !important;
+  margin: 0 1px;
+}

@@ -13,6 +13,7 @@
 	}
 	.search-container{
 		padding: 0;
+		padding-left: 15px !important;
 	}
 	.search{
 		background: #B31010;
@@ -189,3 +190,20 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
 .footer div div{
     padding: 10px !important;
 }
+    .sort-by-container{
+        height:43px;
+        font-weight:800;
+        font-size:12px;
+        color: rgb(106, 106, 106);
+    }
+    .sort-by-container .col-xs-2{
+        font-size:12px;
+        margin-top: 3px;
+    }
+    .sort-by-container .col-xs-3,.sort-by-container .col-xs-2,.sort-by-container .col-xs-4{
+        padding:11px 10px 12px;
+    }
+    .sort-by-container .cat{
+        text-align: center;
+        background: #f1f1f1;
+    }
