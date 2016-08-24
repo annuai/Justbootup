@@ -6,11 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" >
 	<link href="css/slidetabs.css" rel="stylesheet">
+    <link href="css/jquery.swipeButton-1.2.css" rel="stylesheet">
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.slidetabs.min.js"></script>
 	<script type="text/javascript" src="js/jquery.slidetabs.touch.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="js/jquery.swipeButton-1.2.1.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="theme-color" content="red">
@@ -116,50 +118,56 @@
     .view_1 .row{
         border-bottom: 1px solid #E5E5E5;
     }
+    .deals-content .row .col-xs-8{
+        padding: 10px 20px 0 30px;
+    }
     </style>
 </head>
 <body class="alt-grid">
-	<div class="container-fluid">
+<div class="headerbar">
 		<div class="row">
 			<div class="col-xs-12 header">
 
 				
+                <div data-sidebar="true" class="sidebar-trigger">
+                    <a class="sidebar-toggle" href="#">
+                        <div class="col-xs-2  menu-icon">
+                             <img src="images/menu.png" height="28">
+                        </div>
+                    </a>
+    <div class="sidebar-wrapper sidebar-default" style="z-index:1200;">
+        <div class="sidebar-scroller">
+            <ul class="sidebar-menu">
+
+                <li class="sidebar-group">
+                    <span class="name">
+                    <img src="images/user-white.png" height="70" style="display:block; margin-bottom:5px;">
+                    <span>Edward Jain</span>
+                    <div style="position:absolute; right:30px; margin:-33px 0 0 0;"><img src="images/notification-white.png" height="30"></div>
+                    </span>
+                    <ul class="sidebar-group-menu">
+                        <li class="sidebar-item"><a href="#">Your Profile</a></li>
+                        <li class="sidebar-item"><a href="#">Favourites</a></li>
+                        <li class="sidebar-item"><a href="alerts.html">Alerts</a></li>
+                        <li class="sidebar-item"><a href="#">Offers for you!</a></li>
+                        <li class="sidebar-item"><a href="#">Settings</a></li>
+                    </ul>
+                </li>
+             </ul>
+        </div>
+    </div>
+</div>
+             
 					
 
 					<div class="col-xs-10 search-container">
 					<input class="search" placeholder="Search on Jiaoyi">
 					</div>
-					<div class="col-xs-2 menu-grid-icon">
-						<img src="images/menu-grid.png" height="26" >
-					</div>
 				</div>
-				
-				<nav class="pull" display="none">
-  <div class="container-fluid">
-    <div class="row">
-    	<div class="col-xs-6 text-center border-right active">
-    		<img src="images/promotions.png" width="100">
-                    New & Upcoming
-					</div>
-					<div class="col-xs-6 text-center">
-						<img src="images/gift.png" width="100">
-					Offers for You
-					</div>
-					<div class="col-xs-6 text-center">
-						<img src="images/foryou.png" width="100">
-					Favourites
-					</div>
-					<div class="col-xs-6 text-center">
-						<img src="images/discount.png" width="100">
-					Ending Soon
-					</div>
-    </div>
-  </div>
-</nav>
-
-<div class="overlay"></div>
+				</div>
+                </div>
 		
-		</div>
+    <div class="container-fluid main">
 
 			<div class="nearby-content">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592.9457033796759!2d103.82207631614847!3d1.2640872289893657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2eb0924088b36d7e!2sTimberland!5e0!3m2!1sen!2sin!4v1469797616683" width="360" height="580" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -214,25 +222,46 @@
         }
     });
     </script>
-        	<a href="deal.html">
+    <script>
+        $(document).ready(function() {
+
+            // attach the plugin to an element
+            $('#swipeme  li').swipeDelete({
+                btnTheme: 'e',
+                btnLabel: 'Delete',
+                btnClass: 'aSwipeButton',
+                click: function(e){
+                    e.preventDefault();
+                    var url = $(e.target).attr('href');
+                    $(this).parents('li').slideUp();
+                    $.post(url, function(data) {
+                        console.log(data);
+                    });
+                }
+            });
+
+
+        });
+    </script>
+<a href="deal.html">
         	<div class="row">
                         <div class="col-xs-4" style="background:#FFF;padding:0;">
                             <center>
                             <img src="images/sample/beauty/1.jpg" width="130">
                         </center>
                         </div>
-                        <div class="col-xs-8" style="padding:10px 20px 0;"><b><span>Exclusive for you! Get 30% Off at Ikea near you. Buy Furniture at Amazing Price</span></b><br><span>Ikea</b><span style="background:#E02C2C; padding:1px 4px; font-size:12px; border-radius:4px; color:#FFF; margin:0 4px;">2 Days</span> <span class="credit-cards"><img src="images/sample/creditcards/axis.png"><img src="images/sample/creditcards/visa.png"></span>
+                        <div class="col-xs-8"><b><span>Exclusive for you! Get 30% Off at Ikea near you. Buy Furniture at Amazing Price</span></b><br><span>Ikea<span style="background:#E02C2C; padding:1px 4px; font-size:12px; border-radius:4px; color:#FFF; margin:0 4px;">2 Days</span> <span class="credit-cards"><img src="images/sample/creditcards/axis.png"><img src="images/sample/creditcards/visa.png"></span></span>
                             <span class="btn-container"><span class="fav-btn">39</span><span class="comment-btn">23</span><span class="share-btn">474</span></span>
                     </div>
+                    </div>
                         
-                </div>
                 <div class="row">
                         <div class="col-xs-4" style="background:#FFF;padding:0;">
                             <center>
                             <img src="images/sample/beauty/2.jpg" width="130">
                         </center>
                         </div>
-                        <div class="col-xs-8" style="padding:10px 20px;"><b><span>Exclusive for you! Get 30% Off at Ikea near you. Buy Furniture at Amazing Price</span></b><br><span>Ikea</b><span style="background:#E02C2C; padding:1px 4px; font-size:12px; border-radius:4px; color:#FFF; margin:0 4px;">2 Days</span>
+                        <div class="col-xs-8"><b><span>Exclusive for you! Get 30% Off at Ikea near you. Buy Furniture at Amazing Price</span></b><br><span>Ikea</b><span style="background:#E02C2C; padding:1px 4px; font-size:12px; border-radius:4px; color:#FFF; margin:0 4px;">2 Days</span>
                             <span class="credit-cards"><img src="images/sample/creditcards/axis.png"><img src="images/sample/creditcards/visa.png"></span>
                             <span class="btn-container"><span class="fav-btn">39</span><span class="comment-btn">23</span><span class="share-btn">474</span></span>
                         </div>
@@ -243,7 +272,7 @@
                             <img src="images/sample/beauty/3.jpg" width="130">
                         </center>
                         </div>
-                        <div class="col-xs-8" style="padding:10px 20px;"><b><span>Exclusive for you! Get 30% Off at Ikea near you. Buy Furniture at Amazing Price</span></b><br><span>Ikea</b><span style="background:#E02C2C; padding:1px 4px; font-size:12px; border-radius:4px; color:#FFF; margin:0 4px;">2 Days</span>
+                        <div class="col-xs-8"><b><span>Exclusive for you! Get 30% Off at Ikea near you. Buy Furniture at Amazing Price</span></b><br><span>Ikea</b><span style="background:#E02C2C; padding:1px 4px; font-size:12px; border-radius:4px; color:#FFF; margin:0 4px;">2 Days</span>
                             <span class="credit-cards"><img src="images/sample/creditcards/axis.png"><img src="images/sample/creditcards/visa.png"></span>
                             <span class="btn-container"><span class="fav-btn">39</span><span class="comment-btn">23</span><span class="share-btn">474</span></span>
                         </div>
@@ -254,12 +283,14 @@
                             <img src="images/sample/beauty/4.jpg" width="130">
                         </center>
                         </div>
-                        <div class="col-xs-8" style="padding:10px 20px;"><b><span>Exclusive for you! Get 30% Off at Ikea near you. Buy Furniture at Amazing Price</span></b><br><span>Ikea</b><span style="background:#E02C2C; padding:1px 4px; font-size:12px; border-radius:4px; color:#FFF; margin:0 4px;">2 Days</span>
+                        <div class="col-xs-8"><b><span>Exclusive for you! Get 30% Off at Ikea near you. Buy Furniture at Amazing Price</span></b><br><span>Ikea</b><span style="background:#E02C2C; padding:1px 4px; font-size:12px; border-radius:4px; color:#FFF; margin:0 4px;">2 Days</span>
                             <span class="credit-cards"><img src="images/sample/creditcards/axis.png"><img src="images/sample/creditcards/visa.png"></span>
                             <span class="btn-container"><span class="fav-btn">39</span><span class="comment-btn">23</span><span class="share-btn">474</span></span>
                         </div>
                 </div>
-        </a>
+                </a>
+                </div>
+
         </div>
         <div class="view_2 st_view">
         	<div class="row grid"><div class="col-xs-6"><img src="images/sample/baby/1.jpg"></div><div class="col-xs-6"><img src="images/sample/baby/2.jpg"></div><div class="col-xs-6"><img src="images/sample/baby/3.jpg"></div><div class="col-xs-6"><img src="images/sample/baby/4.jpg"></div><div class="col-xs-6"><img src="images/sample/baby/5.jpg"></div><div class="col-xs-6">World</div><div class="col-xs-6">World</div></div>
@@ -382,8 +413,9 @@ squareThis('.grid .col-xs-6 img');
 <script src="js/tabs.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.1.3/hammer.min.js"></script>
 	<script type="text/javascript" src="js/sidebar.js"></script>
-	<script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.13.0.js'><\/script>".replace("HOST", location.hostname));
+	
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.14.0.js'><\/script>".replace("HOST", location.hostname));
 //]]></script>
 </body>
 </html>

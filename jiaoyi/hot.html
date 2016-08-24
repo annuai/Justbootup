@@ -73,52 +73,57 @@
 
     </style>
 </head><body class="alt-grid">
-    <div class="container-fluid">
+<div class="headerbar">
         <div class="row">
             <div class="col-xs-12 header">
 
+                
+                <div data-sidebar="true" class="sidebar-trigger">
+                    <a class="sidebar-toggle" href="#">
+                        <div class="col-xs-2  menu-icon">
+                             <img src="images/menu.png" height="28">
+                        </div>
+                    </a>
+    <div class="sidebar-wrapper sidebar-default" style="z-index:1200;">
+        <div class="sidebar-scroller">
+            <ul class="sidebar-menu">
+
+                <li class="sidebar-group">
+                    <span class="name">
+                    <img src="images/user-white.png" height="70" style="display:block; margin-bottom:5px;">
+                    <span>Edward Jain</span>
+                    <div style="position:absolute; right:30px; margin:-33px 0 0 0;"><img src="images/notification-white.png" height="30"></div>
+                    </span>
+                    <ul class="sidebar-group-menu">
+                        <li class="sidebar-item"><a href="#">Your Profile</a></li>
+                        <li class="sidebar-item"><a href="#">Favourites</a></li>
+                        <li class="sidebar-item"><a href="#">Alerts</a></li>
+                        <li class="sidebar-item"><a href="#">Offers for you!</a></li>
+                        <li class="sidebar-item"><a href="#">Settings</a></li>
+                    </ul>
+                </li>
+             </ul>
+        </div>
+    </div>
+</div>
+             
+                    
 
                     <div class="col-xs-10 search-container">
                     <input class="search" placeholder="Search on Jiaoyi">
                     </div>
-                    <div class="col-xs-2 menu-grid-icon">
-                        <img src="images/menu-grid.png" height="26" >
-                    </div>
                 </div>
-				
-				<nav class="pull" display="none">
-  <div class="container-fluid">
-    <div class="row">
-    	<div class="col-xs-6 text-center border-right active">
-    		<img src="images/promotions.png" width="100">
-    		New & Upcoming
-					</div>
-					<div class="col-xs-6 text-center">
-						<img src="images/gift.png" width="100">
-					Offers for You
-					</div>
-					<div class="col-xs-6 text-center">
-						<img src="images/foryou.png" width="100">
-					Favourites
-					</div>
-					<div class="col-xs-6 text-center">
-						<img src="images/discount.png" width="100">
-					Ending Soon
-					</div>
-    </div>
-  </div>
-</nav>
+                </div>
+                </div>
 
-<div class="overlay"></div>
-		
-		</div>
+  <div class="container-fluid main">
 			<div class="nearby-content" style="margin-left: -15px;">
 				<img src="images/map-sample.png" style="width:100vw;">
 			</div>
 			<div class="hot-content">
             <div class="sort-by-container">
             <div class="row">
-            <div class="col-xs-2">Sort By</div>
+            <div class="col-xs-2" style="font-size:10px;">Sort By</div>
             <div class="col-xs-4 cat">Category</div>
             <div class="col-xs-3 cat">Time</div>
             <div class="col-xs-3 cat">Impact</div>

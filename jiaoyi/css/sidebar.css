@@ -121,9 +121,24 @@
   text-decoration: none;
 }
 .sidebar-wrapper .sidebar-group .name{
-  padding-top: 120px;
+  padding-top: 80px;
   background: #E02C2C;
   color: #FFF !important;
+  font-weight: 200;
+  font-size: 20px;
+}
+.sidebar-wrapper .sidebar-group .name span{
+  padding-left: 5px;
+}
+.name img[src*="images/user-white.png"]{
+   width: 70px; 
+   height: 70px; 
+   -moz-box-shadow: 0px 6px 5px #B92C2C; 
+   -webkit-box-shadow: 0px 6px 5px #B92C2C; 
+   box-shadow: 0px 6px 5px #B92C2C; 
+   -moz-border-radius:190px; 
+   -webkit-border-radius:190px; 
+   border-radius:190px;
 }
 .sidebar-wrapper .sidebar-item > a.active {
   border-left: 5px solid;

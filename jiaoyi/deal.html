@@ -202,7 +202,7 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
 </div>
                 
                      <div class="col-xs-2  menu-icon back-icon">
-                             <img src="images/back.png" height="26">
+                             <img src="images/back.png" height="21" style="margin-top:4px;">
                         </div>
                         <script type="text/javascript">
                             $(document).ready(function(){
@@ -211,11 +211,8 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
                                 });
                             });
                     </script>
-                    <div class="col-xs-8 search-container">
+                    <div class="col-xs-10 search-container">
                     <input class="search" placeholder="Search on Jiaoyi">
-                    </div>
-                    <div class="col-xs-2 menu-grid-icon">
-                        <img src="images/menu-grid.png" height="26" >
                     </div>
                 </div>
 				
@@ -336,7 +333,7 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
                 <div class="also-on col-xs-12">
                     <div class="title">Other Deals @<b>Starbucks</b></div>
                     <div class="row grid"><div class="col-xs-6"><img src="images/sample/starbucks/1.jpg"></div><div class="col-xs-6"><img src="images/sample/starbucks/2.jpg"></div><div class="col-xs-6"><img src="images/sample/starbucks/3.jpg"></div><div class="col-xs-6"><img src="images/sample/starbucks/4.jpg"></div><div class="col-xs-6"><img src="images/sample/starbucks/5.jpg"></div><div class="col-xs-6"><img src="images/sample/starbucks/6.jpg"></div></div>
-                    <div>Show More</div>
+                    <div class="row col-xs-12" style="text-align:center; padding:10px 0; font-size:12px; background:#F1F1F1;">Show More</div>
                 </div>
                 <div class="comments col-xs-12" id="comments">
                     <div class="title">Comments</div>
@@ -397,6 +394,25 @@ $(document).ready(function(){
 	return false;
 });
   </script>
+     <script type="text/javascript">
+window.addEventListener("orientationchange", function() {
+    // rewrite CSS when the user rotates the device                
+    setFooterVisibility();
+}, false);
+
+$(document).ready(function(){
+    // write CSS for the first time when the browser is ready
+    setFooterVisibility();
+});
+
+function setFooterVisibility()
+{
+    var win     = $(window),
+        height  = win.height(),
+        width   = win.width();
+    $('#styles').html("<style>.deal-footer{visibility: hidden;}@media screen and (orientation: portrait) and (min-height: " + (Math.max(width, height) - 10) + "px){ .deal-footer { visibility: visible; } }@media screen and (orientation: landscape) and (min-height: " + (Math.min(width, height) - 30) + "px){ .deal-footer { visibility: visible; } }</style>");
+}
+</script>
   <script type="text/javascript">
 squareThis('.also-on .col-xs-6');
 squareThis('.also-on .col-xs-6 img');

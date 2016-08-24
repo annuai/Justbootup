@@ -13,7 +13,8 @@
 	}
 	.search-container{
 		padding: 0;
-		padding-left: 15px !important;
+		padding-left: 0 !important;
+		padding-right: 15px !important;
 	}
 	.search{
 		background: #B31010;
@@ -89,7 +90,7 @@ body {
 }
 .footer {
   position: fixed;
-  bottom: 0;
+  bottom: -1px !important;
   width: 100%;
   /* Set the fixed height of the footer here */
   background-image: -webkit-gradient(
@@ -206,4 +207,12 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
     .sort-by-container .cat{
         text-align: center;
         background: #f1f1f1;
+    }
+    .headerbar{
+    	position: fixed;
+    	width: 100%;
+    	z-index: 2000;
+    }
+    .main{
+    	padding-top: 52px !important;
     }

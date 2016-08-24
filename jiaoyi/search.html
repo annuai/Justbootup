@@ -79,8 +79,40 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 header">
-                
-                    
+                <div data-sidebar="true" class="sidebar-trigger">
+                    <a class="sidebar-toggle" href="#">
+                       
+                    </a>
+
+    <div class="sidebar-wrapper sidebar-default" style="z-index:1200;">
+        <div class="sidebar-scroller">
+            <ul class="sidebar-menu">
+                <li class="sidebar-group">
+                    <span class="name">John</span>
+                    <ul class="sidebar-group-menu">
+                        <li class="sidebar-item"><a href="#" class="active">Home</a></li>
+                        <li class="sidebar-item"><a href="#">Favourites</a></li>
+                        <li class="sidebar-item"><a href="#">Alerts</a></li>
+                        <li class="sidebar-item"><a href="#">Rewards</a></li>
+                        <li class="sidebar-item"><a href="#">Deals for Me</a></li>
+                        <li class="sidebar-item"><a href="#">Settings</a></li>
+                    </ul>
+                </li>
+             </ul>
+        </div>
+    </div>
+</div>
+
+                    <div class="col-xs-2  menu-icon back-icon">
+                             <img src="images/back.png" height="25">
+                        </div>
+                        <script type="text/javascript">
+                            $(document).ready(function(){
+                                $('.back-icon').on('click', function() {
+                                    history.go(-1);
+                                });
+                            });
+                    </script>
 
                     <div class="col-xs-10 search-container">
                     <input class="search" placeholder="Search on Jiaoyi">
@@ -92,9 +124,7 @@
                     });
                     </script>
                     </div>
-                    <div class="col-xs-2 menu-grid-icon">
-                        <img src="images/menu-grid.png" height="26" >
-                    </div>
+                    
                 </div>
 
 				<nav class="pull" display="none">
