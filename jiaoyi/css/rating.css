@@ -14,6 +14,7 @@
   position: relative;
   width: 1em;
   font-size: 17px;
+  color: #FFF;
 }
 .rating > span:hover,
 .rating > span:hover ~ span {

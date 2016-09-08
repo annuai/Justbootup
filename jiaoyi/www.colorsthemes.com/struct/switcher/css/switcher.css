@@ -1,0 +1,91 @@
+/************************************************************************************
+STYLESHEET SWITCHER - DEMO ONLY -
+*************************************************************************************/
+
+.slide-out-div {
+	position: relative;
+	z-index: 20000000;
+	width: 210px;
+	height: 560px;
+	padding: 0;
+	margin: 0;
+	font-size: 13px;
+	background: #f5f5f5;
+	border-radius: 0;
+	font-family: 'Lora', serif;
+}
+.slide-out-div h4 {
+	height: 50px;
+	background: #66aacc;
+	padding: 10px 20px;
+	margin: 0 0 20px;
+	color: #ffffff;
+}
+.slide-out-div h5 {
+	color: #36414d;
+	font-weight: 300;
+	margin: 0;
+	padding: 0 20px 0;
+}
+.slide-out-div ul { 
+	margin: 0;
+	padding: 0 20px 0; 
+}
+.slide-out-div ul li {
+	float: left;
+	display: block;
+	list-style-type: none;
+	text-align: center;
+	margin: 1px;
+	cursor: pointer;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.slide-out-div ul li a {
+	color: #36414d;
+	font-size: 10px;
+	line-height: 10px;
+	display: block;
+	text-decoration: none;
+	padding: 10px;  /* width height */
+}
+.slide-out-div .white a {
+	padding: 6px 8px;  /* width height */
+}
+.select-area { margin: 0 5px; }
+
+.gray { background: #999999; }
+.black { background: #333333; }
+.rose { background: #cc6699; }
+.pink { background: #cc66cc; }
+.purple { background: #9966cc; }
+.indigo { background: #6666cc; }
+.blue { background: #6699cc; }
+.aqua { background: #66cccc; }
+.emerald { background: #66cc99; }
+.green { background: #66cc66; }
+.olive { background: #99cc66; }
+.yellow { background: #cccc66; }
+.orange { background: #cc9966; }
+.red { background: #cc6666; }
+
+.white { background: #ffffff; }
+.reset {
+	background: #66aacc;
+	border: none !important;
+	margin-top: 10px !important;
+}
+.reset a { 
+	padding: 10px 25px 12px !important; 
+	color: #ffffff !important; 
+	font-size: 12px !important;
+}
+.box1200-1, .box1600-1 { background: url("../../images/assets/colors/pattern1.png") repeat; }
+.box1200-2, .box1600-2 { background: url("../../images/assets/colors/pattern2.png") repeat; }
+.box1200-3, .box1600-3 { background: url("../../images/assets/colors/pattern3.png") repeat; }
+.box1200-4, .box1600-4 { background: url("../../images/assets/colors/pattern4.png") repeat; }
+.box1200-5, .box1600-5 { background: url("../../images/assets/colors/pattern5.png") repeat; }
+.box1200-6, .box1600-6 { background: url("../../images/assets/colors/pattern6.png") repeat; }
+.box1200-7, .box1600-7 { background: url("../../images/assets/colors/pattern7.png") repeat; }
+
+
+

@@ -192,17 +192,17 @@ background-image: linear-gradient(to bottom, #F2F2F2 0%, #E3E3E3 100%);
     padding: 10px !important;
 }
     .sort-by-container{
-        height:43px;
+        height:34px;
         font-weight:800;
-        font-size:12px;
+        font-size:9px;
         color: rgb(106, 106, 106);
     }
     .sort-by-container .col-xs-2{
-        font-size:12px;
-        margin-top: 3px;
+        font-size:11px;
+        margin-top: 0px;
     }
     .sort-by-container .col-xs-3,.sort-by-container .col-xs-2,.sort-by-container .col-xs-4{
-        padding:11px 10px 12px;
+        padding:8px 10px 9px;
     }
     .sort-by-container .cat{
         text-align: center;
